@@ -7,7 +7,6 @@ class GeoUtil(object):
         self.geocoder = geopy.geocoders.GoogleV3(domain="maps.google.co.uk")
 
     def geolocate(self, place):
-        print "in"
         return self.geocoder.geocode(place,exactly_one=False)[0][1]
 
     def map_at(self, lat, long, satellite=False, zoom=12, size=(400,400), sensor=False):
