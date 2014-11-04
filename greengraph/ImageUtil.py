@@ -1,10 +1,6 @@
-import geopy
-import requests
 import png
 from itertools import izip
 from StringIO import StringIO
-
-from numpy import linspace
 
 class ImageUtil(object):
   def is_green(self, r,g,b):
@@ -34,6 +30,7 @@ class ImageUtil(object):
                 outrow.append(0)
             outrow.append(0)
         out.append(outrow)
+
     buffer=StringIO()
     result = png.from_array(out,mode='RGB')
     result.save(buffer)
